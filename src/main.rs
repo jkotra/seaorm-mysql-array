@@ -127,7 +127,7 @@ async fn find_all() -> Result<(), DbErr> {
             .all(&db)
             .await?;
 
-        if emp_projs.len() > 1 {
+        if emp_projs.len() > 0 {
             obj.projects = Vec::new();
 
             for proj in emp_projs {
